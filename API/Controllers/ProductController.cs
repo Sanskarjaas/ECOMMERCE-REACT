@@ -39,9 +39,8 @@ namespace API.Controllers
 
             var totalItems = await _productRepo.CountAsync(countSpec);
             var products = await _productRepo.ListAsync(spec);
-
             var data = _mapper.Map<IReadOnlyList<ProductToReturnDto>>(products);
-
+            // return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, totalItems, data));
             return Ok(data);
             // return products.Select(product => new ProductToReturnDto
             // {

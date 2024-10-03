@@ -3,6 +3,7 @@ using Core.Intefaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using API.Controllers;
 
 namespace API.Extensions
 {
@@ -14,9 +15,11 @@ namespace API.Extensions
             services.AddDbContext<StoreContext>(options =>
             {
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-                //options.UseSqlite(.Configuration.GetConnectionString("Default"));
+                //b => b.MigrationsAssembly("Infrastructure"));
+                // SqlServerOptions => SqlServerOptions.EnableRetryOnFailure(),
+                //options.UseSqlite(config.GetConnectionString("Default"));
             });
-            //services.AddScoped<IProductRepository,ProductRepository>();
+            //services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.Configure<ApiBehaviorOptions>(options =>
@@ -38,7 +41,7 @@ namespace API.Extensions
             {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:3000");
                 });
             });
             return services;
