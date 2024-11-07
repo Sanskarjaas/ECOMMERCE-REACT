@@ -1,0 +1,47 @@
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  margin-top: 60px; /* Space for fixed header */
+}
+
+.product-grid-container {
+  flex-grow: 1;
+  margin-left: 20px;
+}
