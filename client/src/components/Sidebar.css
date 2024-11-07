@@ -1,0 +1,28 @@
+/* src/components/Sidebar.css */
+.sidebar-container {
+    width: 25%;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

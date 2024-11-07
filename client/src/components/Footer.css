@@ -1,0 +1,31 @@
+/* src/components/Footer.css */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: 'Georgia', serif;
+    border-top: 1px solid #888;
+  }
+  
+  .contact-info {
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #d4af37;
+  }
+  
