@@ -41,7 +41,7 @@ namespace API.Extensions
             {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000","https://ecommerce-react-three-zeta.vercel.app/");
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://ecommerce-react-three-zeta.vercel.app/");
                 });
             });
             return services;
